@@ -35,7 +35,40 @@ const Contact = () => {
   //   setTimeout(() => setShowSuccess(false), 3000);
   // };
 
-  const handleSubmit = async (e) => {
+//   const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   setIsSubmitting(true);
+
+//   try {
+//     const res = await fetch("https://formsubmit.co/ajax/56be82ba5f54911f7d4af63a57ae7640", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//         Accept: "application/json",
+//       },
+//       // body: JSON.stringify(formData),
+//        body: JSON.stringify({ ...formData, _captcha: false }),
+//     });
+
+    
+
+
+
+//     if (res.ok) {
+//       setShowSuccess(true);
+//       setFormData({ name: "", email: "", subject: "", message: "" });
+//       setTimeout(() => setShowSuccess(false), 3000);
+//     } else {
+//       alert("Something went wrong. Please try again.");
+//     }
+//   } catch (err) {
+//     alert("Error submitting the form");
+//   } finally {
+//     setIsSubmitting(false);
+//   }
+// };
+
+const handleSubmit = async (e) => {
   e.preventDefault();
   setIsSubmitting(true);
 
@@ -46,13 +79,14 @@ const Contact = () => {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      // body: JSON.stringify(formData),
-       body: JSON.stringify({ ...formData, _captcha: false }),
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        _captcha: false
+      }),
     });
-
-    
-
-
 
     if (res.ok) {
       setShowSuccess(true);
@@ -67,8 +101,6 @@ const Contact = () => {
     setIsSubmitting(false);
   }
 };
-
-
   const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/in/satyam", label: "LinkedIn", color: "hover:text-blue-600" },
     { icon: Github, href: "https://github.com/satyam0777", label: "GitHub", color: "hover:text-gray-800 dark:hover:text-white" },
