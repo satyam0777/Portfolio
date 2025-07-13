@@ -40,15 +40,30 @@ const Contact = () => {
   setIsSubmitting(true);
 
   try {
-    const res = await fetch("https://formsubmit.co/ajax/officialsatyam0777@gmail.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      // body: JSON.stringify(formData),
-       body: JSON.stringify({ ...formData, _captcha: false }),
-    });
+    // const res = await fetch("https://formsubmit.co/ajax/officialsatyam0777@gmail.com", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Accept: "application/json",
+    //   },
+    //   // body: JSON.stringify(formData),
+    //    body: JSON.stringify({ ...formData, _captcha: false }),
+    await fetch(import.meta.env.VITE_FORMSUBMIT_URL, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
+  body: JSON.stringify({
+    name: formData.name,
+    email: formData.email,
+    subject: formData.subject,
+    message: formData.message,
+  }),
+});
+    
+
+
 
     if (res.ok) {
       setShowSuccess(true);
