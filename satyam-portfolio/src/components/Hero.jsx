@@ -251,7 +251,7 @@ const Hero = () => (
   Hire Me
 </a>
       <a
-        href="../public/assets/resume.pdf"
+        href="/assets/resume.pdf"
         target="_blank"
         className="bg-gray-800 text-white px-8 py-4 rounded-full hover:bg-gray-700 transition-all duration-300"
       >
