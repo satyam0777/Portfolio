@@ -21,52 +21,7 @@ const Contact = () => {
     });
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setIsSubmitting(true);
-    
-  //   // Simulate form submission
-  //   await new Promise(resolve => setTimeout(resolve, 2000));
-    
-  //   setIsSubmitting(false);
-  //   setShowSuccess(true);
-  //   setFormData({ name: '', email: '', subject: '', message: '' });
-    
-  //   setTimeout(() => setShowSuccess(false), 3000);
-  // };
 
-//   const handleSubmit = async (e) => {
-//   e.preventDefault();
-//   setIsSubmitting(true);
-
-//   try {
-//     const res = await fetch("https://formsubmit.co/ajax/56be82ba5f54911f7d4af63a57ae7640", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Accept: "application/json",
-//       },
-//       // body: JSON.stringify(formData),
-//        body: JSON.stringify({ ...formData, _captcha: false }),
-//     });
-
-    
-
-
-
-//     if (res.ok) {
-//       setShowSuccess(true);
-//       setFormData({ name: "", email: "", subject: "", message: "" });
-//       setTimeout(() => setShowSuccess(false), 3000);
-//     } else {
-//       alert("Something went wrong. Please try again.");
-//     }
-//   } catch (err) {
-//     alert("Error submitting the form");
-//   } finally {
-//     setIsSubmitting(false);
-//   }
-// };
 
 const handleSubmit = async (e) => {
   e.preventDefault();
