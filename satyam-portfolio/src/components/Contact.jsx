@@ -48,7 +48,7 @@ const Contact = () => {
     //   },
     //   // body: JSON.stringify(formData),
     //    body: JSON.stringify({ ...formData, _captcha: false }),
-    await fetch(import.meta.env.VITE_FORMSUBMIT_URL, {
+    await fetch(process.env.REACT_APP_FORMSUBMIT_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
