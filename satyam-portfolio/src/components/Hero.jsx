@@ -103,7 +103,7 @@ const Hero = () => (
     {/* <div className="text-2xl md:text-3xl mb-8 text-gray-300">
       <span className="typing-animation">Full Stack Developer & Problem Solver</span>
     </div> */}
-    <div className="text-xl sm:text-xl md:text-3xl mb-8 text-gray-300 text-center px-4 break-words">
+    <div className="text-xl sm:text-lg md:text-3xl mb-8 text-gray-300 text-center px-4 break-words">
   <span className="typing-animation">
     Full Stack Developer & Problem Solver
   </span>
