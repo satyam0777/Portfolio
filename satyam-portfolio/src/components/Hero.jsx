@@ -1,125 +1,4 @@
-// Hero.jsx
-// import { motion } from 'framer-motion';
 
-// const Hero = () => (
-//   <section className="h-screen flex items-center justify-center text-center bg-gradient-to-b from-black to-gray-900 text-white font-sans">
-//     <motion.div
-//       initial={{ opacity: 0, y: 50 }}
-//       animate={{ opacity: 1, y: 0 }}
-//       transition={{ duration: 1 }}
-//     >
-//       <h1 className="text-4xl md:text-6xl font-bold mb-2">Hi, I'm Satyam 👋</h1>
-//       <motion.p
-//         className="text-xl md:text-2xl text-gray-300"
-//         initial={{ opacity: 0 }}
-//         animate={{ opacity: 1 }}
-//         transition={{ delay: 0.5 }}
-//       >
-//         Full Stack Developer | MERN | Freelancer
-//       </motion.p>
-//       <motion.a
-//         href="#projects"
-//         className="mt-6 inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-white font-medium transition"
-//         initial={{ scale: 0 }}
-//         animate={{ scale: 1 }}
-//         transition={{ delay: 1, duration: 0.3 }}
-//       >
-//         🚀 View My Work
-//       </motion.a>
-//     </motion.div>
-//   </section>
-// );
-
-// export default Hero;
-
-// Hero.jsx
-// import { motion } from 'framer-motion';
-
-// const Hero = () => (
-//   <section
-//     id="hero"
-//     className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden font-sans bg-tech bg-[length:200%_200%] animate-techWaves"
-//   >
-//     <div className="z-10">
-//       <motion.h1
-//         initial={{ opacity: 0, y: -40 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1 }}
-//         className="text-white text-5xl sm:text-6xl font-bold mb-4"
-//       >
-//         Hi, I'm <span className="text-blue-400 font-signature">Satyam</span>
-//       </motion.h1>
-//       <motion.p
-//         initial={{ opacity: 0, y: 20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1, delay: 0.3 }}
-//         className="text-gray-300 text-lg sm:text-xl max-w-2xl"
-//       >
-//         A Full Stack Developer crafting elegant and scalable web applications using modern technologies like React, Node.js, MongoDB, and Express.
-//       </motion.p>
-//       <motion.div
-//         initial={{ opacity: 0, y: 20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1, delay: 0.6 }}
-//         className="mt-8 flex justify-center gap-6"
-//       >
-//         <a href="#projects" className="bg-blue-500 text-white px-5 py-3 rounded-full hover:bg-blue-600 transition duration-300">View Projects</a>
-//         <a href="#contact" className="border border-white text-white px-5 py-3 rounded-full hover:bg-white hover:text-gray-900 transition duration-300">Contact Me</a>
-//       </motion.div>
-//     </div>
-//     <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-indigo-900/10 z-0" />
-//   </section>
-// );
-
-// export default Hero;
-
-// Hero.jsx
-// import { motion } from 'framer-motion';
-// import webImage from '/assets/web-design.png';
-// import setupImage from '/assets/setup-desk.png';
-
-// const Hero = () => (
-//   <section
-//     id="hero"
-//     className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden font-sans bg-tech bg-[length:200%_200%] animate-techWaves"
-//   >
-//     <div className="absolute top-0 left-0 h-full w-full pointer-events-none z-0">
-//       <img src={webImage} alt="web design" className="absolute top-10 left-10 w-32 md:w-48 opacity-30 animate-floatAround" />
-//       <img src={setupImage} alt="system setup" className="absolute bottom-10 right-10 w-40 md:w-56 opacity-30 animate-floatAround" />
-//     </div>
-//     <div className="z-10">
-//       <motion.h1
-//         initial={{ opacity: 0, y: -40 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1 }}
-//         className="text-white text-5xl sm:text-6xl font-bold mb-4"
-//       >
-//         Hi, I'm <span className="text-blue-400 font-signature">Satyam Prajapati</span>
-//       </motion.h1>
-//       <motion.p
-//         initial={{ opacity: 0, y: 20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1, delay: 0.3 }}
-//         className="text-gray-300 text-lg sm:text-xl max-w-2xl"
-//       >
-//         A Full Stack Developer crafting elegant and scalable web applications using modern technologies like React, Node.js, MongoDB, and Express.
-//       </motion.p>
-//       <motion.div
-//         initial={{ opacity: 0, y: 20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1, delay: 0.6 }}
-//         className="mt-8 flex justify-center gap-6"
-//       >
-//         <a href="#projects" className="bg-blue-500 text-white px-5 py-3 rounded-full hover:bg-blue-600 transition duration-300">View Projects</a>
-//         <a href="#contact" className="border border-white text-white px-5 py-3 rounded-full hover:bg-white hover:text-gray-900 transition duration-300">Contact Me</a>
-//           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-5 py-3 rounded-full hover:bg-blue-600 transition duration-300">📄 View Resume</a>
-//       </motion.div>
-//     </div>
-//     <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-indigo-900/10 z-0" />
-//   </section>
-// );
-
-// export default Hero;
 
 import { motion } from 'framer-motion';
 
@@ -221,9 +100,15 @@ const Hero = () => (
       </motion.h1>
     </h1>
 
-    <div className="text-2xl md:text-3xl mb-8 text-gray-300">
+    {/* <div className="text-2xl md:text-3xl mb-8 text-gray-300">
       <span className="typing-animation">Full Stack Developer & Problem Solver</span>
-    </div>
+    </div> */}
+    <div className="text-xl sm:text-2xl md:text-3xl mb-8 text-gray-300 text-center px-4 break-words">
+  <span className="typing-animation block">
+    Full Stack Developer & Problem Solver
+  </span>
+</div>
+
 
     <p className="text-xl mb-12 max-w-3xl mx-auto text-gray-400 leading-relaxed">
       I craft exceptional digital experiences using modern technologies.
