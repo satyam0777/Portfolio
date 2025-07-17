@@ -72,7 +72,7 @@ const handleSubmit = async (e) => {
   return (
     <section id="contact" className="relative py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
 
-      {/* Animated Background Elements */}
+     {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(6)].map((_, i) => (
           <motion.div
@@ -113,7 +113,7 @@ const handleSubmit = async (e) => {
             Let's Connect
           </motion.h2>
           <motion.p 
-            className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -132,7 +132,7 @@ const handleSubmit = async (e) => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 rounded-2xl p-8 shadow-xl border border-white/20 dark:border-gray-700/20">
+            <div className="backdrop-blur-sm bg-gray-800/70 rounded-2xl p-8 shadow-xl border border-gray-700/20">
               {/* <div className="space-y-6"> */}
               <form className="space-y-6" onSubmit={handleSubmit}>
 
@@ -149,7 +149,7 @@ const handleSubmit = async (e) => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                      className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     />
                   </motion.div>
                   <motion.div
@@ -164,7 +164,7 @@ const handleSubmit = async (e) => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                      className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     />
                   </motion.div>
                 </div>
@@ -180,7 +180,7 @@ const handleSubmit = async (e) => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                   />
                 </motion.div>
 
@@ -196,7 +196,7 @@ const handleSubmit = async (e) => {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"
+                    className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"
                   ></textarea>
                 </motion.div>
 
@@ -258,19 +258,19 @@ const handleSubmit = async (e) => {
                   key={index}
                   href={info.href}
                   whileHover={{ scale: 1.05, x: 10 }}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 group"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-gray-800/70 backdrop-blur-sm border border-gray-700/20 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 group"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center group-hover:shadow-lg transition-shadow">
                     <info.icon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-gray-700 dark:text-gray-300 font-medium">{info.text}</span>
+                  <span className="text-gray-300 font-medium">{info.text}</span>
                 </motion.a>
               ))}
             </div>
 
             {/* Social Links */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Follow Me</h3>
+              <h3 className="text-xl font-semibold text-white">Follow Me</h3>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -280,7 +280,7 @@ const handleSubmit = async (e) => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`flex items-center gap-3 p-4 rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 group ${social.color}`}
+                    className={`flex items-center gap-3 p-4 rounded-xl bg-gray-800/70 backdrop-blur-sm border border-gray-700/20 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 group ${social.color}`}
                   >
                     <social.icon className="w-5 h-5" />
                     <span className="font-medium">{social.label}</span>
@@ -302,9 +302,9 @@ const handleSubmit = async (e) => {
                   transition={{ duration: 3, repeat: Infinity }}
                   className="w-3 h-3 bg-green-500 rounded-full"
                 />
-                <span className="text-gray-800 dark:text-white font-semibold">Available for Projects</span>
+                <span className="text-white font-semibold">Available for Projects</span>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
+              <p className="text-sm text-gray-300">
                 I'm currently accepting new projects and collaborations. Let's build something amazing together!
               </p>
             </motion.div>
