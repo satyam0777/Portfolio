@@ -8,7 +8,7 @@ const projects = [
     id: 1,
     title: "Second Brain",
     description: "A second-brain productivity tool where users can store notes, bookmarks, documents and manage their digital knowledge effectively. Built using the MERN stack with authentication.",
-    liveLink: "https://secondbrain.vercel.app",
+    liveLink: "https://second-brain-project.vercel.app/",
     githubLink: "https://github.com/satyam0777/Second-Brain-Project",
     image: "/assets/SecondBrain.png",
     tags: ["React", "Node.js", "MongoDB", "Express"],
@@ -61,8 +61,11 @@ const ProjectCard = ({ project, index }) => {
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const rotateX = useSpring(useTransform(y, [-100, 100], [30, -30]));
-  const rotateY = useSpring(useTransform(x, [-100, 100], [-30, 30]));
+  // const rotateX = useSpring(useTransform(y, [-100, 100], [30, -30]));
+  // const rotateY = useSpring(useTransform(x, [-100, 100], [-30, 30]));
+  const rotateX = useSpring(useTransform(y, [-100, 100], [8, -8]));
+const rotateY = useSpring(useTransform(x, [-100, 100], [-8, 8]));
+
 
   const handleMouseMove = (e) => {
     if (!cardRef.current) return;
@@ -105,7 +108,7 @@ const ProjectCard = ({ project, index }) => {
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.6 }}
           />
           
