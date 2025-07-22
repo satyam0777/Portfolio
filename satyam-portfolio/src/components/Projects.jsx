@@ -206,7 +206,7 @@ const rotateY = useSpring(useTransform(x, [-100, 100], [-8, 8]));
               Live Demo
             </motion.a>
             <motion.a
-              href={projects.githubLink}
+              href={project.githubLink}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

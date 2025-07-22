@@ -6,7 +6,15 @@ const Navbar = () => (
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 
-                <h1 class="text-3xl font-signature font-bold neon-text text-blue-600 tracking-wider">Satyam</h1>
+                {/* <h1 class="text-3xl font-signature font-bold neon-text text-blue-600 tracking-wider">Satyam</h1> */}
+          <h1
+  className="text-3xl font-signature font-bold text-blue-600 tracking-wider"
+  style={{ textShadow: "0 0 1px #3b82f6, 0 0 0.5px #3b82f6" }}
+>
+  Satyam
+</h1>
+
+
                 
                 {/* <!-- Desktop Menu --> */}
                 <div class="hidden md:flex space-x-8">
