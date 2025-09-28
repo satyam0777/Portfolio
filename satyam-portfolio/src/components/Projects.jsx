@@ -29,10 +29,36 @@ const projects = [
     color: "from-green-500 to-teal-600"
   },
   {
-    id: 3,
+  id: 3,
+  title: "StudyHelperAI",
+  description: "An AI-powered study assistant that generates personalized quizzes, flashcards, and summaries to help students learn faster and smarter. Features include GPT-based question generation, progress tracking, and interactive UI.",
+  liveLink: "https://study-helper-six.vercel.app/",   
+  githubLink: "https://github.com/satyam0777/Study-helper", 
+  image: "/assets/Studyhelper.png",  
+  tags: ["React", "TypeScript","TailwindCSS", "Node.js", "Express", "MongoDB", "Gemini AI"],
+  category: "Full Stack",
+  featured: true,
+  color: "from-purple-500 to-indigo-600"
+},
+{
+  id: 4,
+  title: "DSA Mastery",
+  description: "A structured platform to learn and track progress in Data Structures & Algorithms. Includes roadmap-based problem sets, mindmap visualization, progress dashboard, and LeetCode-style practice integration.",
+  liveLink: "https://dsa-mastery-project.vercel.app/",   // update with your real link
+  githubLink: "https://github.com/satyam0777/DSA-mastery-project",
+  image: "/assets/DSAmastery.png",  
+  tags: ["React","TailwindCSS", "Node.js", "Express", "MongoDB", "Chart.js"],
+  category: "Full Stack",
+  featured: true,
+  color: "from-green-500 to-emerald-600"
+}
+  ,
+
+  {
+    id: 5,
     title: "Blog App",
     description: "A full-stack blogging platform allowing users to write, edit, and delete blog posts. Features include authentication and real-time rendering using React and Node.js.",
-    liveLink: "https://myblog.vercel.app",
+    liveLink: "https://github.com/satyam0777/Blog-App-Project",
     githubLink: "https://github.com/satyam0777/Blog-App-Project",
     image: "/assets/Blogapp.png",
     tags: ["React", "Node.js", "Express", "MongoDB"],
@@ -41,7 +67,7 @@ const projects = [
     color: "from-orange-500 to-red-600"
   },
    {
-    id: 4,
+    id: 6,
     title: "DevTinder",
     description: "A Tinder-style app that connects developers based on tech stack compatibility, goals, and interests. Once matched, users can decide how to collaborate. A creative way to form dev teams or co-build side projects. ",
     liveLink: "https://github.com/satyam0777/devTinder",
