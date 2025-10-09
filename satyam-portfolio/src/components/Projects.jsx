@@ -19,12 +19,12 @@ const projects = [
   {
     id: 2,
     title: "VetCare",
-    description: "A responsive veterinary appointment booking app with login functionality and dashboard, allowing pet owners to book appointments with veterinarians seamlessly.",
-    liveLink: "https://vetcare-project.vercel.app/",
-    githubLink: "https://github.com/satyam0777/vetcare-project",
+    description: "VetCare is a comprehensive veterinary telemedicine platform connecting farmers with veterinary doctors for livestock and pet care. The platform includes advanced payment workflows, video consultations, and notification systems.",
+    liveLink: "https://vet-care-plateform-crm.vercel.app/",
+    githubLink: "https://github.com/satyam0777/VetCare-Plateform-CRM",
     image: "/assets/VetCare.png",
-    tags: ["React", "Firebase", "Tailwind CSS", "JavaScript"],
-    category: "Frontend",
+    tags: ["React", "Express", "Tailwind CSS", "JavaScript", "Node.js", "MongoDB","Socket.io","Agario.io","Rozarpay"],
+    category: "Full Stack",
     featured: true,
     color: "from-green-500 to-teal-600"
   },
