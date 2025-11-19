@@ -40,7 +40,7 @@ const Hero = () => {
               <a href="#contact" className="px-4 md:px-6 py-2 md:py-2.5 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg font-semibold border-2 border-gray-300 dark:border-gray-700 hover:border-gray-900 dark:hover:border-white transition-all shadow-sm hover:shadow-lg hover:-translate-y-0.5 text-xs md:text-sm">
                 Contact Me
               </a>
-              <a href="/resume.pdf" target="_blank" className="px-4 md:px-6 py-2 md:py-2.5 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg font-semibold border border-gray-300 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all text-xs md:text-sm flex items-center gap-2">
+              <a href="/assets/resume.pdf" target="_blank" className="px-4 md:px-6 py-2 md:py-2.5 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg font-semibold border border-gray-300 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all text-xs md:text-sm flex items-center gap-2">
                 <i className="fas fa-file-alt"></i>
                 <span>Resume</span>
               </a>
