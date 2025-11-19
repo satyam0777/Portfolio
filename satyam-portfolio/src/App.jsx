@@ -1,33 +1,53 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
-import Skills from './components/Skills';
+import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ProjectDetail from './components/ProjectDetail';
+import BlogDetail from './components/BlogDetail';
 
-function App() {
+function Home() {
   return (
-    <div className="font-sans scroll-smooth">
+    <>
       <Navbar />
       <main>
         <Hero />
         <About />
         <Projects />
-        <Skills />
+        <Blog />
         <Contact />
       </main>
-      {/* // Footer.jsx */}
-      <Footer/>
-     
-  {/* <footer className="bg-gray-200 dark:bg-gray-800 text-center py-6 text-sm text-gray-700 dark:text-gray-300 font-sans">
-    <p>© {new Date().getFullYear()} Satyam Prajapati. All rights reserved.</p>
-    <p className="mt-1">Made with  using React & Tailwind</p>
-  </footer> */}
+      <Footer />
+    </>
+  );
+}
 
-
-{/* export default Footer; */}
-    </div>
+function App() {
+  return (
+    <Router>
+      <div className="font-sans scroll-smooth">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project/:id" element={
+            <>
+              <Navbar />
+              <ProjectDetail />
+              <Footer />
+            </>
+          } />
+          <Route path="/blog/:id" element={
+            <>
+              <Navbar />
+              <BlogDetail />
+              <Footer />
+            </>
+          } />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -6,8 +6,8 @@ export default  {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
-        signature: ["Great Vibes", "cursive"],
+        sans: ["Inter", "sans-serif"],
+        signature: ["Dancing Script", "cursive"],
       },
       rotate: {
         '-4': '-4deg',

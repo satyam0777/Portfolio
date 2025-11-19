@@ -1,228 +1,127 @@
+const Hero = () => {
+  const projects = [
+    { name: "Second Brain", tech: "React + Node.js + MongoDB", status: "Deployed" },
+    { name: "VetCare", tech: "MERN + Socket.io + Razorpay", status: "Deployed" },
+    { name: "StudyHelperAI", tech: "React + TypeScript + Gemini AI", status: "Deployed" },
+    { name: "DSA Mastery", tech: "MERN + Chart.js", status: "Deployed" },
+    { name: "Blog App", tech: "React + Node.js + MongoDB", status: "Deployed" },
+    { name: "DevTinder", tech: "MERN Stack", status: "Deployed" }
+  ];
 
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 relative overflow-hidden pt-16 md:pt-0">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 rounded-full blur-3xl opacity-50"></div>
 
-import { motion } from 'framer-motion';
+      <div className="container mx-auto px-4 md:px-6 py-12 md:py-20 relative z-10">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-4 md:space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-green-50 dark:bg-green-900/20 rounded-full border border-green-200 dark:border-green-800">
+              <div className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </div>
+              <span className="text-xs md:text-sm font-medium text-green-700 dark:text-green-300">Open to Opportunities</span>
+            </div>
 
+            <div>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-2 md:mb-3 tracking-tight">Satyam Prajapati</h1>
+              <p className="text-lg md:text-2xl text-gray-600 dark:text-gray-400 font-semibold tracking-wide">Full Stack Developer</p>
+            </div>
 
-const Hero = () => (
+            <p className="text-sm md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              Building production-ready web applications with <span className="font-semibold text-blue-600 dark:text-blue-400">React</span>, <span className="font-semibold text-green-600 dark:text-green-400">Node.js</span>, and <span className="font-semibold text-purple-600 dark:text-purple-400">MongoDB</span>. Passionate about creating scalable solutions with clean code.
+            </p>
 
+            <div className="flex flex-wrap gap-2 md:gap-3">
+              <a href="#projects" className="px-4 md:px-6 py-2 md:py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-xs md:text-sm">
+                View Projects
+              </a>
+              <a href="#contact" className="px-4 md:px-6 py-2 md:py-2.5 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg font-semibold border-2 border-gray-300 dark:border-gray-700 hover:border-gray-900 dark:hover:border-white transition-all shadow-sm hover:shadow-lg hover:-translate-y-0.5 text-xs md:text-sm">
+                Contact Me
+              </a>
+              <a href="/resume.pdf" target="_blank" className="px-4 md:px-6 py-2 md:py-2.5 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg font-semibold border border-gray-300 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all text-xs md:text-sm flex items-center gap-2">
+                <i className="fas fa-file-alt"></i>
+                <span>Resume</span>
+              </a>
+            </div>
 
-//  <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden cyber-grid">
-//         <div class="code-bg"></div>
-//         <div class="container mx-auto px-6 text-center relative z-10">
-//             <div class="availability-badge inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-8 mt-20 sm:mt-0">
-//                 <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-//                 Available for Work
-//             </div>
-            
-//             <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-               
-//                  <motion.h1
-//         initial={{ opacity: 0, y: -40 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1 }}
-//         className="text-white text-5xl sm:text-6xl font-bold mb-4"
-//       >
-//         Hi, I'm <span className="text-blue-400 font-signature">Satyam Prajapati</span>
-//       </motion.h1>
-//             </h1>
-            
-//             <div class="text-2xl md:text-3xl mb-8 text-gray-300">
-//                 <span class="typing-animation">Full Stack Developer & Problem Solver</span>
-//             </div>
-            
-//             <p class="text-xl mb-12 max-w-3xl mx-auto text-gray-400 leading-relaxed">
-//                 I craft exceptional digital experiences using modern technologies. 
-//                 Specializing in <span class="text-blue-400 font-semibold">MERN Stack</span>, 
-//                 I transform ideas into scalable, user-friendly applications.
-//             </p>
-            
-            
-            
-//             <div class="flex flex-wrap gap-6 justify-center">
-//                 <a href="#projects" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 glow">
-//                     <i class="fas fa-code mr-2"></i>
-//                     View My Work
-//                 </a>
-//                 <a href="#contact" class="glass border-2 border-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-500 hover:bg-opacity-20 transition-all duration-300">
-//                     <i class="fas fa-envelope mr-2"></i>
-//                     Let's Connect
-//                 </a>
-//                 <a href="../public/assets/resume.pdf" target="_blank" class="bg-gray-800 text-white px-8 py-4 rounded-full hover:bg-gray-700 transition-all duration-300">
-//                     <i class="fas fa-download mr-2"></i>
-//                     Download Resume
-//                 </a>
-//             </div>
-            
-//             <div class="social-links flex justify-center gap-6 mt-12">
-//                 <a href="https://github.com/satyam0777" target="_blank" class="glass w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:bg-opacity-20">
-//                     <i class="fab fa-github text-xl"></i>
-//                 </a>
-//                 <a href="https://www.linkedin.com/in/satyam-prajapati-13a690256/" target="_blank" class="glass w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:bg-opacity-20">
-//                     <i class="fab fa-linkedin text-xl"></i>
-//                 </a>
-//                 <a href="https://twitter.com/satyam9352" target="_blank" class="glass w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:bg-opacity-20">
-//                     <i class="fab fa-twitter text-xl"></i>
-//                 </a>
-//                 <a href="mailto:officialsatyam0777@gmail.com" class="glass w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:bg-opacity-20">
-//                     <i class="fas fa-envelope text-xl"></i>
-//                 </a>
-//             </div>
-//         </div>
+            <div className="flex items-center gap-3 md:gap-4 pt-2 md:pt-4">
+              <a href="https://github.com/satyam0777" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"><i className="fab fa-github text-xl md:text-2xl"></i></a>
+              <a href="https://www.linkedin.com/in/satyam-prajapati-13a690256/" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"><i className="fab fa-linkedin text-xl md:text-2xl"></i></a>
+              <a href="https://leetcode.com/satyam0777/" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors"><i className="fas fa-code text-xl md:text-2xl"></i></a>
+              <a href="mailto:officialsatyam0777@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors"><i className="fas fa-envelope text-xl md:text-2xl"></i></a>
+            </div>
+          </div>
 
-//            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 floating">
-//             <div class="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
-//                 <div class="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-bounce"></div>
-//             </div>
-//         </div>
-//         </section>
-    
+          {/* Terminal-style Project Showcase */}
+          <div className="bg-gray-900 dark:bg-gray-950 rounded-xl shadow-2xl border border-gray-700 overflow-hidden">
+            {/* Terminal Header */}
+            <div className="bg-gray-800 dark:bg-gray-900 px-3 md:px-4 py-2 md:py-3 flex items-center gap-2 border-b border-gray-700">
+              <div className="flex gap-1.5 md:gap-2">
+                <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-500"></div>
+                <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500"></div>
+              </div>
+              <div className="ml-2 md:ml-4 text-xs md:text-sm text-gray-400 font-mono">satyam@portfolio:~$</div>
+            </div>
 
-//    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden cyber-grid">
-<main>
-<section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden cyber-grid">
+            {/* Terminal Content - Scrolling Projects */}
+            <div className="p-4 md:p-6 h-64 md:h-96 overflow-hidden font-mono text-xs md:text-sm">
+              <div className="space-y-3 md:space-y-4 animate-scroll">
+                <div className="text-green-400">$ ls -la projects/</div>
+                <div className="text-gray-400">total 6 projects</div>
+                
+                {projects.map((project, index) => (
+                  <div key={index} className="mt-3 md:mt-4 border-l-2 border-blue-500 pl-3 md:pl-4">
+                    <div className="text-blue-400">📁 {project.name}</div>
+                    <div className="text-gray-500 text-xs mt-1">├─ Stack: {project.tech}</div>
+                    <div className="text-green-500 text-xs">└─ Status: ✓ Deployed</div>
+                  </div>
+                ))}
 
-  <div className="code-bg"></div>
+                <div className="mt-4 md:mt-6 text-purple-400">$ leetcode stats</div>
+                <div className="text-gray-400">
+                  <div className="flex items-center gap-2 mt-2">
+                    <span className="text-green-500">●</span>
+                    <span>250+ Problems Solved</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-500">●</span>
+                    <span>Data Structures & Algorithms</span>
+                  </div>
+                </div>
 
-  <div className="container mx-auto px-6 text-center relative z-10">
-    <div className="availability-badge inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-8 mt-20 sm:mt-0">
-      <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-      Available for Work
-    </div>
+                <div className="mt-4 md:mt-6 text-cyan-400">$ tech-stack --list</div>
+                <div className="text-gray-400 space-y-1 mt-2">
+                  <div><span className="text-blue-500">→</span> Frontend: React, Next.js, TypeScript</div>
+                  <div><span className="text-green-500">→</span> Backend: Node.js, Express, MongoDB</div>
+                  <div><span className="text-purple-500">→</span> Tools: Git, Docker, Postman</div>
+                </div>
 
-    <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-      <motion.h1
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-white text-5xl sm:text-6xl font-bold mb-4"
-      >
-        Hi, I'm <span className="text-blue-400 font-signature">Satyam Prajapati</span>
-      </motion.h1>
-    </h1>
+                <div className="mt-4 md:mt-6">
+                  <span className="text-gray-500">$ </span>
+                  <span className="animate-pulse">▊</span>
+                </div>
 
-    {/* <div className="text-2xl md:text-3xl mb-8 text-gray-300">
-      <span className="typing-animation">Full Stack Developer & Problem Solver</span>
-    </div> */}
-  <div className="text-center px-4 text-xl sm:text-2xl md:text-3xl mb-8 text-gray-300 leading-tight tracking-tight">
-  <span className="typing-animation">
-    Full Stack Developer <br className="block md:hidden" /> & Problem Solver
-  </span>
-</div>
-
-
-
-
-    <p className="text-xl mb-12 max-w-3xl mx-auto text-gray-400 leading-relaxed">
-      I craft exceptional digital experiences using modern technologies.
-      Specializing in <span className="text-blue-400 font-semibold">MERN Stack</span>,
-      I transform ideas into scalable, user-friendly applications.
-    </p>
-
-    <div className="flex flex-wrap gap-6 justify-center">
-      <a
-        href="#projects"
-        className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 glow"
-      >
-        <i className="fas fa-code mr-2"></i>
-        View My Work
-      </a>
-      {/* <a
-        href="#contact"
-        className="glass border-2 border-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-500 hover:bg-opacity-20 transition-all duration-300"
-      >
-        <i className="fas fa-envelope mr-2"></i>
-        Let's Connect
-      </a> */}
-      <a href="#contact" class="glass border-2 border-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-500 hover:bg-opacity-20 transition-all duration-300">
-  <i class="fas fa-briefcase mr-2"></i>
-  Hire Me
-</a>
-      <a
-        href="/assets/resume.pdf"
-        target="_blank"
-        className="bg-gray-800 text-white px-8 py-4 rounded-full hover:bg-gray-700 transition-all duration-300"
-      >
-        <i className="fas fa-download mr-2"></i>
-        Download Resume
-      </a>
-    </div>
-
-    <div className="social-links flex justify-center gap-6 mt-12">
-      <a
-        href="https://github.com/satyam0777"
-        target="_blank"
-        className="glass w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:bg-opacity-20"
-      >
-        <i className="fab fa-github text-xl"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/satyam-prajapati-13a690256/"
-        target="_blank"
-        className="glass w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:bg-opacity-20"
-      >
-        <i className="fab fa-linkedin text-xl"></i>
-      </a>
-      <a
-        href="https://twitter.com/satyam9352"
-        target="_blank"
-        className="glass w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:bg-opacity-20"
-      >
-        <i className="fab fa-twitter text-xl"></i>
-      </a>
-      <a
-        href="mailto:officialsatyam0777@gmail.com"
-        className="glass w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:bg-opacity-20"
-      >
-        <i className="fas fa-envelope text-xl"></i>
-      </a>
-    </div>
-  </div>
-
-  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 floating">
-    <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
-      <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-bounce"></div>
-    </div>
-  </div>
-
- 
-
-
-</section>
-
-
-<section id="leetcode" className="py-16 px-4 sm:px-6  bg-[#0f172a] text-white">
-  <div className="max-w-4xl mx-auto text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold mb-4">📚 LeetCode Journey</h2>
-    <p className="text-gray-400 mb-8 text-base sm:text-lg">
-      I regularly solve problems on <span className="text-yellow-400 font-semibold">LeetCode</span> to improve my data structures and algorithms skills. 
-    </p>
-
-    <div className="bg-gray-800 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-lg">
-      <div className="text-left">
-        <h3 className="text-xl sm:text-2xl font-semibold mb-2">📈 My Progress</h3>
-        <ul className="text-gray-300 text-sm sm:text-base leading-relaxed">
-          <li>🟢 Easy: 70+</li>
-          <li>🟡 Medium: 80+</li>
-          <li>🔴 Hard: 15+</li>
-        </ul>
+                {/* Repeat for continuous scroll */}
+                <div className="mt-6 md:mt-8 text-green-400">$ ls -la projects/</div>
+                <div className="text-gray-400">total 6 projects</div>
+                
+                {projects.map((project, index) => (
+                  <div key={`repeat-${index}`} className="mt-3 md:mt-4 border-l-2 border-blue-500 pl-3 md:pl-4">
+                    <div className="text-blue-400">📁 {project.name}</div>
+                    <div className="text-gray-500 text-xs mt-1">├─ Stack: {project.tech}</div>
+                    <div className="text-green-500 text-xs">└─ Status: ✓ Deployed</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div>
-        <a
-          href="https://leetcode.com/satyam0777/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-full font-medium transition-all duration-300 inline-block"
-        >
-          View LeetCode Profile
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
-
-  
-);
+    </section>
+  );
+};
 
 export default Hero;

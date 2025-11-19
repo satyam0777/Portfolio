@@ -1,52 +1,40 @@
-
 const Navbar = () => (
-
-
-  <nav class="fixed top-0 w-full z-50 glass">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                
-                {/* <h1 class="text-3xl font-signature font-bold neon-text text-blue-600 tracking-wider">Satyam</h1> */}
-          <h1
-  className="text-3xl font-signature font-bold text-blue-600 tracking-wider"
-  style={{ textShadow: "0 0 1px #3b82f6, 0 0 0.5px #3b82f6" }}
->
-  Satyam
-</h1>
-
-
-                
-                {/* <!-- Desktop Menu --> */}
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link px-4 py-2 rounded-lg hover:text-blue-400 transition-colors">Home</a>
-                    <a href="#about" class="nav-link px-4 py-2 rounded-lg hover:text-blue-400 transition-colors">About</a>
-                    {/* <a href="#experience" class="nav-link px-4 py-2 rounded-lg hover:text-blue-400 transition-colors">Experience</a> */}
-                    <a href="#projects" class="nav-link px-4 py-2 rounded-lg hover:text-blue-400 transition-colors">Projects</a>
-                    <a href="#skills" class="nav-link px-4 py-2 rounded-lg hover:text-blue-400 transition-colors">Skills</a>
-                    {/* <a href="#services" class="nav-link px-4 py-2 rounded-lg hover:text-blue-400 transition-colors">Services</a> */}
-                    <a href="#contact" class="nav-link px-4 py-2 rounded-lg hover:text-blue-400 transition-colors">Contact</a>
-                </div>
-                
-                {/* <!-- Mobile Menu Button --> */}
-                <button class="md:hidden text-white" id="mobileMenuBtn">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
+  <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50">
+    <div className="container mx-auto px-6 py-3">
+      <div className="flex items-center justify-between">
+        <a href="#home" className="group relative">
+          <span className="text-3xl font-bold font-signature bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-blue-700 hover:to-purple-700 transition-all">
+            Satyam
+          </span>
+          <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+        </a>
+        
+        <div className="hidden md:flex items-center gap-6">
+          <a href="#home" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+          <a href="#about" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+          <a href="#projects" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
+          <a href="#blog" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</a>
+          <a href="#contact" className="px-4 py-1.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all shadow-md hover:shadow-lg">
+            Contact
+          </a>
         </div>
         
-        {/* <!-- Mobile Menu --> */}
-        <div class="mobile-menu md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 backdrop-blur-lg z-40" id="mobileMenu">
-            <div class="flex flex-col items-center justify-center h-full space-y-8">
-                <a href="#home" class="text-2xl hover:text-blue-400 transition-colors">Home</a>
-                <a href="#about" class="text-2xl hover:text-blue-400 transition-colors">About</a>
-             
-                <a href="#projects" class="text-2xl hover:text-blue-400 transition-colors">Projects</a>
-                <a href="#skills" class="text-2xl hover:text-blue-400 transition-colors">Skills</a>
-                
-                <a href="#contact" class="text-2xl hover:text-blue-400 transition-colors">Contact</a>
-            </div>
-        </div>
-    </nav>
+        <button className="md:hidden text-gray-700 dark:text-gray-300" id="mobileMenuBtn">
+          <i className="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div className="mobile-menu md:hidden fixed top-0 left-0 w-full h-full bg-black/95 backdrop-blur-lg z-40 -translate-x-full transition-transform" id="mobileMenu">
+      <div className="flex flex-col items-center justify-center h-full space-y-6">
+        <a href="#home" className="text-xl text-white hover:text-blue-400 transition-colors">Home</a>
+        <a href="#about" className="text-xl text-white hover:text-blue-400 transition-colors">About</a>
+        <a href="#projects" className="text-xl text-white hover:text-blue-400 transition-colors">Projects</a>
+        <a href="#blog" className="text-xl text-white hover:text-blue-400 transition-colors">Blog</a>
+        <a href="#contact" className="text-xl text-white hover:text-blue-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
 );
 
 export default Navbar;

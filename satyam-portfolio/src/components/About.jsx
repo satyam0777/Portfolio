@@ -503,283 +503,119 @@
 
 
 // components/About.jsx
-// components/About.jsx
-import { motion } from 'framer-motion';
-
 const About = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        duration: 0.6
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const techStack = [
-    { name: "React", color: "from-blue-400 to-cyan-400" },
-    { name: "Node.js", color: "from-green-400 to-emerald-400" },
-    { name: "MongoDB", color: "from-green-500 to-teal-500" },
-    { name: "Express", color: "from-gray-400 to-gray-600" },
-    { name: "TypeScript", color: "from-blue-500 to-indigo-500" },
-    { name: "Next.js", color: "from-purple-400 to-pink-400" }
-  ];
-
-  const highlights = [
-    { 
-      icon: "⚡", 
-      title: "Fast Learner", 
-      subtitle: "Embracing new tools and technologies quickly",
-      color: "yellow"
-    },
-    { 
-      icon: "🧩", 
-      title: "Problem Solver", 
-      subtitle: "Crafting efficient, readable solutions",
-      color: "blue"
-    },
-    { 
-      icon: "🚀", 
-      title: "Performance Focused", 
-      subtitle: "Prioritizing speed and user experience",
-      color: "purple"
-    },
-    { 
-      icon: "💡", 
-      title: "Innovation Driven", 
-      subtitle: "Tackling challenges with a creative mindset",
-      color: "green"
-    }
-  ];
-
-  const stats = [
-    { number: "Daily", label: "Learning & Building" },
-    { number: "10+", label: "Practice Projects" },
-    { number: "Always", label: "Growing & Improving" }
-  ];
-
   return (
-    <section id="about" className="py-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(120,119,198,0.1),transparent_50%)] pointer-events-none"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,105,180,0.1),transparent_50%)] pointer-events-none"></div>
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          {/* Compact Header */}
-          <motion.div 
-            className="text-center mb-10"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-black mb-3">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-                About Me
-              </span>
+    <section id="about" className="py-16 bg-gray-50 dark:bg-gray-900">
+      <div className="container mx-auto px-6">
+        <div className="max-w-5xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+              About Me
             </h2>
-            {/* <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Full-stack developer focused on building functional web applications with clean, modern code
-            </p> */}
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-  Full-stack developer building reliable web applications with clean, modern code.
-</p>
+            <p className="text-gray-600 dark:text-gray-400">
+              MERN Stack Developer • Problem Solver • 250+ LeetCode
+            </p>
+          </div>
 
-          </motion.div>
-
-          {/* Compact Stats Row */}
-          <motion.div 
-            className="grid grid-cols-3 gap-4 mb-10"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                className="text-center p-4 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
-                variants={cardVariants}
-                whileHover={{ y: -3, scale: 1.02 }}
-              >
-                <div className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-1">
-                  {stat.number}
+          <div className="grid lg:grid-cols-2 gap-6">
+            {/* Left: Profile Card */}
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-xl">
+                  👨‍💻
                 </div>
-                <div className="text-gray-400 text-xs font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Main Content Grid */}
-          <motion.div 
-            className="grid lg:grid-cols-3 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {/* Profile Card */}
-            <motion.div 
-              className="lg:col-span-2 p-5 rounded-2xl bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 relative overflow-hidden"
-              variants={cardVariants}
-              whileHover={{ scale: 1.01 }}
-            >
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-full blur-2xl"></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl shadow-lg">
-                    👨‍💻
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-1">Meet the Developer</h3>
-                    {/* <p className="text-purple-300 text-base font-medium leading-snug">Building seamless digital experiences with modern web technologies</p> */}
-                    <p className="text-purple-300 text-base font-medium leading-snug">
-  Focused on crafting efficient and maintainable full-stack solutions using modern web tools.
-</p>
-
-                    {/* <p className="text-sm text-gray-400 mt-2 flex items-center gap-2">
-                      <span>🇮🇳 India</span>
-                      <span>•</span>
-                      <span>MERN Stack</span>
-                      <span>•</span>
-                      <span>Lifelong Learner</span>
-                    </p> */}
-                    <p className="text-sm text-gray-400 mt-2 flex items-center gap-2">
-  <span>🇮🇳 India</span>
-  <span>•</span>
-  <span>MERN Stack</span>
-  <span>•</span>
-  <span>Continual Learner</span>
-</p>
-
-                  </div>
-                </div>
-
-                <div className="mb-4">
-                  <h4 className="text-lg font-semibold text-blue-300 mb-2 flex items-center gap-2">
-                    <span>🚀</span> Development Journey
-                  </h4>
-                  <div className="grid gap-2">
-                    <div className="flex items-center gap-3 p-2 rounded-lg bg-gray-700/20 hover:bg-gray-700/30 transition-colors">
-                      <span className="text-lg">🕒</span>
-                      <span className="text-gray-300 text-base">Daily learning & building with dedication</span>
-                    </div>
-                    <div className="flex items-center gap-3 p-2 rounded-lg bg-gray-700/20 hover:bg-gray-700/30 transition-colors">
-                      <span className="text-lg">💡</span>
-                      <span className="text-gray-300 text-base">Multiple hands-on projects completed</span>
-                    </div>
-                    <div className="flex items-center gap-3 p-2 rounded-lg bg-gray-700/20 hover:bg-gray-700/30 transition-colors">
-                      <span className="text-lg">🧠</span>
-                      <span className="text-gray-300 text-base">Clean, maintainable & scalable code focus</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Tech Stack Pills */}
                 <div>
-                  <h4 className="text-lg font-semibold text-white flex items-center gap-2 mb-3">
-                    <span className="text-yellow-400">🧰</span> Tech Arsenal
-                  </h4>
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {techStack.map((tech, index) => (
-                      <motion.div
-                        key={tech.name}
-                        className={`px-4 py-2 rounded-full bg-gradient-to-r ${tech.color} text-white text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-300`}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: index * 0.1, duration: 0.4 }}
-                        viewport={{ once: true }}
-                        whileHover={{ scale: 1.1, y: -2 }}
-                      >
-                        {tech.name}
-                      </motion.div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    Full Stack Developer
+                  </h3>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">Based in India 🇮🇳</p>
+                </div>
+              </div>
+
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>
+                  Specialized in <span className="font-semibold text-blue-600 dark:text-blue-400">MERN stack</span>, building production-ready applications from AI-powered study tools to telemedicine platforms with focus on performance and scalability.
+                </p>
+                <p>
+                  Strong foundation in <span className="font-semibold text-green-600 dark:text-green-400">DSA</span> (250+ LeetCode) ensures clean, efficient, and maintainable code.
+                </p>
+              </div>
+
+              <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
+                  <div className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  </div>
+                  <span className="text-sm font-semibold">Open to full-time opportunities</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Tech Stack Card */}
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                <span>🛠️</span> Tech Stack
+              </h3>
+              
+              <div className="space-y-4">
+                {/* Frontend */}
+                <div>
+                  <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Frontend</h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {['React', 'Next.js', 'TypeScript', 'Tailwind', 'Redux'].map((tech) => (
+                      <span key={tech} className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">
+                        {tech}
+                      </span>
                     ))}
                   </div>
-                  {/* <div className="text-sm text-gray-400">
-                    + Git, GitHub, REST APIs, Postman
-                  </div> */}
-                  <div className="text-sm text-gray-400">
-  + Git, GitHub, REST APIs, Postman, and related tools
-</div>
-                </div>
-              </div>
-            </motion.div>
-            
-            {/* Highlights Card */}
-            <motion.div 
-              className="p-5 rounded-2xl bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 relative overflow-hidden"
-              variants={cardVariants}
-              whileHover={{ scale: 1.01 }}
-            >
-              <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-blue-500/30 to-cyan-500/30 rounded-full blur-xl"></div>
-              
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-4 text-white flex items-center gap-2">
-                  <span className="text-2xl">🎯</span>
-                  Key Strengths
-                </h3>
-                
-                <div className="space-y-3 mb-4">
-                  {highlights.map((item, index) => (
-                    <motion.div 
-                      key={item.title}
-                      className="group p-3 rounded-xl bg-gradient-to-r from-gray-700/30 to-gray-600/20 hover:from-gray-600/40 hover:to-gray-500/30 transition-all duration-300 border border-gray-600/20 hover:border-gray-500/40"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.15, duration: 0.5 }}
-                      viewport={{ once: true }}
-                      whileHover={{ x: 3 }}
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="text-2xl group-hover:scale-110 transition-transform duration-300">
-                          {item.icon}
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="font-bold text-white text-lg group-hover:text-blue-300 transition-colors duration-300">
-                            {item.title}
-                          </h4>
-                          <p className="text-gray-300 text-sm group-hover:text-gray-200 transition-colors duration-300 leading-relaxed">
-                            {item.subtitle}
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
                 </div>
 
-                {/* CTA */}
-                <motion.div 
-                  className="p-4 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <h5 className="text-blue-300 font-bold mb-2 text-base flex items-center gap-2">
-                    <span>🤝</span> Let's Build Together!
-                  </h5>
-                  <p className="text-sm text-gray-200 leading-relaxed">
-                    Excited to collaborate on impactful projects, contribute to teams, and continue leveling up in web development. Open to opportunities!
-                  </p>
-                </motion.div>
+                {/* Backend */}
+                <div>
+                  <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Backend</h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs'].map((tech) => (
+                      <span key={tech} className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs font-medium hover:bg-green-200 dark:hover:bg-green-900/50 transition-colors">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Tools */}
+                <div>
+                  <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Tools</h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {['Git', 'Socket.io', 'Razorpay', 'Gemini AI', 'Docker', 'Vercel'].map((tech) => (
+                      <span key={tech} className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-xs font-medium hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Stats */}
+                <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
+                  <div className="grid grid-cols-3 gap-3 text-center">
+                    <div>
+                      <div className="text-xl font-bold text-blue-600 dark:text-blue-400">6+</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">Projects</div>
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-green-600 dark:text-green-400">250+</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">LeetCode</div>
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-purple-600 dark:text-purple-400">2+</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">Years</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
