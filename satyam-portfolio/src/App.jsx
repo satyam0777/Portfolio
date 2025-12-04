@@ -28,7 +28,7 @@ function Home() {
 function App() {
   return (
     <Router>
-      <div className="font-sans scroll-smooth">
+      <div className="font-sans scroll-smooth dark">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project/:id" element={

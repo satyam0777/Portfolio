@@ -96,7 +96,7 @@ const Contact = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 rounded-lg border-2 border-gray-200 dark:border-gray-700 transition-all duration-300 ${social.color} hover:border-transparent hover:shadow-xl hover:-translate-y-0.5`}
+                className={`group flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 rounded-lg border-2 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white transition-all duration-300 ${social.color} hover:border-transparent hover:shadow-xl hover:-translate-y-0.5`}
               >
                 <i className={`${social.icon} text-lg`}></i>
                 <span className="text-sm font-semibold">{social.name}</span>
