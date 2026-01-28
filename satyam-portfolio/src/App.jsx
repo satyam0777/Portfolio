@@ -14,13 +14,13 @@ function Home() {
     <>
       <Navbar />
       <main>
-        <Hero />
+        <Hero /> 
         <About />
         <Projects />
         <Blog />
         <Contact />
       </main>
-      <Footer />
+       <Footer /> 
     </>
   );
 }
